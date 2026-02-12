@@ -260,7 +260,6 @@ medical_ai_pipeline/
 ├── 📄 main.ipynb              # COMPLETE PIPELINE — all 5 parts in one file
 ├── 📄 README.md              # You are here
 ├── 📄 requirements.txt       # Dependencies
-├── 📄 .gitignore           # Git ignore rules
 │
 └── 📊 results/              # All visualizations from the notebook
     ├── lstm_gradient_analysis.png     # Vanishing gradient proof
@@ -382,10 +381,7 @@ jupyter>=1.0.0
 **Ali Ainur**
 
 <p align="center">
-  <a href="https://t.me/seekenov">
-    <img src="https://img.shields.io/badge/Telegram-@seekenov-26A5E4?style=for-the-badge&logo=telegram&logoColor=white">
-  </a>
-  <a href="mailto:ali.ainur@example.com">
+  <a href="mailto:ainurali@gmail.com">
     <img src="https://img.shields.io/badge/Email-ali.ainur%40example.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white">
   </a>
   <a href="https://github.com/Ainuralin">
@@ -406,14 +402,3 @@ jupyter>=1.0.0
 ## 📄 License
 
 MIT License © 2026 Ali Ainur
-
----
-
-<p align="center">
-  <strong>⭐ If you find this project useful, please consider giving it a star!</strong>
-</p>
-
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=100&section=footer">
-</p>
-```
