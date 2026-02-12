@@ -389,13 +389,6 @@ jupyter>=1.0.0
   </a>
 </p>
 
-### 🔗 Related Project
-
-<p align="center">
-  <a href="https://github.com/Ainuralin/sp500_prediction_DL">
-    <img src="https://img.shields.io/badge/📈_S%26P_500_Forecasting-Transformer_vs_LSTM-2F9ED8?style=for-the-badge">
-  </a>
-</p>
 
 ---
 
