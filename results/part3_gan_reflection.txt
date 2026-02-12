@@ -1,0 +1,26 @@
+
+================================================================================
+WRITTEN REFLECTION: TRAINING CHALLENGES & PRIVACY IMPLICATIONS
+================================================================================
+
+BIGGEST TRAINING CHALLENGE:
+The most difficult challenge was preventing mode collapse in the GAN. Initially,
+after 10-15 epochs, the generator would collapse to producing only 1-2 types of
+MRI images (mostly notumor class). The discriminator became too strong, causing
+vanishing gradients and halting learning.
+
+SOLUTIONS IMPLEMENTED:
+I addressed this through multiple strategies: (1) Added dropout (0.25) to the
+discriminator to prevent overfitting, (2) Implemented label smoothing (0.9/0.1)
+to provide better gradient signals, (3) Used LeakyReLU instead of ReLU to avoid
+dead neurons, and (4) Added Gaussian noise to discriminator inputs. These
+changes stabilized training and maintained diversity throughout 30 epochs.
+
+PRIVACY BENEFITS:
+Synthetic medical data generation is crucial for privacy preservation. The GAN
+produces entirely artificial brain MRI images that contain NO real patient data.
+These synthetic images can be freely shared, used for research, and augment
+datasets without HIPAA violations or patient consent issues. This is especially
+valuable for rare tumor types where collecting sufficient real data is
+challenging. Additionally, synthetic data can balance class distributions and
+reduce demographic biases without exposing sensitive patient information.

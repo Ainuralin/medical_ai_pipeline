@@ -1,0 +1,4 @@
+Model,Format,Device,Size (MB),Time (ms),Speedup,Accuracy
+Baseline (FP32),PyTorch,CPU,90.0,125.2,1.0x,98.9%
+TorchScript,JIT,CPU,90.1,151.9,0.8x,98.9%
+TorchScript GPU,JIT,GPU,90.1,4.9,25.7x,98.9%

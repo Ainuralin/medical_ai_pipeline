@@ -1,0 +1,35 @@
+
+================================================================================
+PART 2: MEDICAL IMAGE ANALYSIS - BRAIN MRI TUMOR CLASSIFICATION
+================================================================================
+
+📊 DATASET: Brain Tumor MRI Dataset
+   • 4 classes: glioma, meningioma, notumor, pituitary
+   • Training samples: 4569
+   • Validation samples: 1143
+   • Hardware: Tesla T4 GPU
+
+📈 RESULTS:
+   • ResNet-18: 98.60% validation accuracy
+   • ResNet-50: 98.86% validation accuracy
+   • Improvement: 0.26%
+
+🔬 BIAS-VARIANCE DIAGNOSIS:
+   • ResNet-18: Train-Val Gap = 0.61% → HIGH BIAS
+   • ResNet-50: Train-Val Gap = 0.33% → Balanced
+
+🎯 REGULARIZATION:
+   • Dropout (0.5) added to ResNet-50
+   • Weight decay (L2, 1e-4)
+   • Data augmentation (flip, rotation, color jitter)
+
+📊 METRICS (ResNet-50):
+   • Accuracy:  98.86%
+   • Precision: 0.9887
+   • Recall:    0.9886
+   • F1-Score:  0.9886
+
+✅ CONCLUSION:
+   ResNet-50 with dropout achieves 98.86% accuracy on brain MRI
+   tumor classification, outperforming ResNet-18 (98.60%).
+   Regularization effectively reduces overfitting and improves generalization.

@@ -1,0 +1,60 @@
+
+================================================================================
+TRAINING CHALLENGES & SOLUTIONS - GAN FOR BRAIN MRI
+================================================================================
+
+CHALLENGE 1: MODE COLLAPSE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PROBLEM:
+• Generator started producing only 1-2 types of MRI images
+• Discriminator loss dropped to near zero
+• Lack of diversity in generated samples
+
+SOLUTIONS APPLIED:
+1. Added Dropout layers in discriminator (0.25)
+2. Used label smoothing (valid = 0.9, fake = 0.1)
+3. Implemented learning rate scheduling
+4. Increased latent dimension to 100
+
+RESULT: Mode collapse resolved - diverse brain MRI generations
+
+CHALLENGE 2: DISCRIMINATOR OVERFITTING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PROBLEM:
+• Discriminator loss approached 0 too quickly
+• Generator gradients vanished
+• No learning progress after 10 epochs
+
+SOLUTIONS APPLIED:
+1. Added noise to discriminator inputs (0.1 * Gaussian)
+2. Reduced discriminator learning rate
+3. Added spectral normalization
+4. Balanced G/D training frequency (1:1 ratio)
+
+RESULT: Stable GAN training throughout 30 epochs
+
+CHALLENGE 3: VANISHING GRADIENTS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PROBLEM:
+• Generator gradients near zero
+• No improvement in image quality
+
+SOLUTIONS APPLIED:
+1. Switched from Sigmoid to Tanh in generator output
+2. Used LeakyReLU instead of ReLU
+3. Added BatchNorm layers
+4. Initialized weights with Normal(0, 0.02)
+
+RESULT: Stable gradient flow, continuous improvement
+
+STRATEGIES USED TO STABILIZE TRAINING:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✓ DCGAN architecture guidelines
+✓ BatchNorm in generator (not discriminator)
+✓ LeakyReLU activation (α=0.2)
+✓ Adam optimizer (β1=0.5, β2=0.999)
+✓ Learning rate: 0.0002
+✓ Weight initialization: N(0, 0.02)
+✓ Label smoothing: 0.9/0.1
+✓ Input noise: Gaussian (σ=0.1)
+✓ Dropout in discriminator: 0.25
